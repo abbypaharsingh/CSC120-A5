@@ -19,8 +19,23 @@ public class Boot {
     public void display() {
         if (this.direction.equals("left")) {
           System.out.println("Left boot?");
+          System.out.println("         |===|    ");
+          System.out.println("         |   |    ");
+          System.out.println("         /  &|    ");
+          System.out.println("     _.-'`  ,)*   ");
+          System.out.println("    |________)    ");
         } else if (this.direction.equals("right")) {
-          System.out.println("Right boot?");
+          System.out.println("                 |===|");
+          System.out.println("                 |   |");
+          System.out.println("                 |&  \\");
+          System.out.println("                *( ,  `'-._");
+          System.out.println("                 (_________|");
+        } else if (this.direction.equals("both")) {
+          System.out.println("         |===|    |===|");
+          System.out.println("         |   |    |   |");
+          System.out.println("         /  &|    |&  \\");
+          System.out.println("     _.-'`  ,)*  *( ,  `'-._");
+          System.out.println("    |________)    (_________|");
         } else {
           System.out.println("Which boot?");
         }
@@ -30,7 +45,9 @@ public class Boot {
     public static void main(String[] args) {
         Boot myLeftBoot = new Boot("left");
         Boot myRightBoot = new Boot("right");
+        Boot myBothBoot = new Boot("both");
         myLeftBoot.display();
         myRightBoot.display();
+        myBothBoot.display();
     }
 }

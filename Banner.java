@@ -18,7 +18,45 @@ public class Banner {
      * TODO: Modify this method to print a decorative banner, resized to fit the message
      */
     public void display() {
-        System.out.println(this.message);
+        //first row of banner
+        System.out.print("  ********");
+        for (int i = 0;i < this.message.length(); i++){
+            System.out.print("*");
+        }
+        System.out.println();
+
+        //second row of banner
+        System.out.print(" *** " );
+        for (int i = 0;i < this.message.length(); i++){
+            System.out.print("~");
+        }
+        System.out.print("~~ ***"); 
+        System.out.println();
+
+        // middle row of banner with message 
+        System.out.println("*** " + "~  " + this.message + "  ~" + " ***" );
+
+        //fourth row of banner 
+        System.out.print(" *** " );
+        for (int i = 0;i < this.message.length(); i++){
+            System.out.print("~");
+        }
+        System.out.print("~~~  ***"); 
+        System.out.println();
+        
+        // fifth row of banner 
+        System.out.print("   ***");
+        for (int i = 0;i < this.message.length(); i++){
+            System.out.print("*");
+        }
+        System.out.print("    ***"); 
+        System.out.println();
+        
+        // tail of banner
+        for (int i = 0;i < this.message.length(); i++){
+            System.out.print(" ");
+        }
+        System.out.print( "    ******");
     }
 
     /* main method (for testing) */
@@ -27,3 +65,6 @@ public class Banner {
         myBanner.display();
     }
 }
+
+
+
